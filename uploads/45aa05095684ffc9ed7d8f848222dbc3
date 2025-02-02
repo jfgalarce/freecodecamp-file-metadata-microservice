@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Modelo ER">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Entidad: Vuelo -->
+        <mxCell id="vuelo" value="Vuelo" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vuelo_atributos" value="ID_Vuelo (PK)\nServicios\nCosto" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="vuelo">
+          <mxGeometry x="0" y="0" width="150" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Entidad: Itinerario -->
+        <mxCell id="itinerario" value="Itinerario" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="150" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="itinerario_atributos" value="ID_Itinerario (PK)\nFecha\nHora_Salida\nHora_Llegada" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="itinerario">
+          <mxGeometry x="0" y="0" width="150" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Entidad: Aeropuerto -->
+        <mxCell id="aeropuerto" value="Aeropuerto" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="550" y="50" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aeropuerto_atributos" value="Codigo_IATA (PK)\nTipo" style="text;html=1;align=center;verticalAlign=middle;" vertex="1" parent="aeropuerto">
+          <mxGeometry x="0" y="0" width="150" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Relación: Vuelo - Itinerario -->
+        <mxCell id="relacion_vuelo_itinerario" value="Tiene" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="vuelo" target="itinerario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Relación: Itinerario - Aeropuerto -->
+        <mxCell id="relacion_itinerario_aeropuerto" value="Opera en" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="itinerario" target="aeropuerto">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
